@@ -2,25 +2,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  // Входной файл
   entry: [
     './src/js/index.js'
   ],
 
-  // Выходной файл
   output: {
     filename: './js/bundle.js'
   },
 
-  // Source maps для удобства отладки
   devtool: "source-map",
 
   module: {
     rules: [
-      // Транспилируем js с babel
       {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src/js'),
@@ -33,40 +28,28 @@ module.exports = {
         }
       },
 
-      // Компилируем SCSS в CSS
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, // Extract css to separate file
-          'css-loader', // translates CSS into CommonJS
-           // parse CSS and add vendor prefixes to CSS rules
-          
-             'postcss-loader',
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          "postcss-loader",
+          'sass-loader',
         ],
       },
 
-      // Подключаем шрифты из css
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'file-loader?name=./fonts/[name].[ext]'
-          },
-        ]
+        test: /\.(woff2?|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
 
-      // Подключаем картинки из css
       {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
-        use: [
-          {
-            loader: 'file-loader?name=./static/[name].[ext]'
-          },
-        ]
+        type: 'asset/resource',
       },
     ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack 4 Starter',
@@ -78,9 +61,8 @@ module.exports = {
       }
     }),
 
-    // Кладем стили в отдельный файлик
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+        filename: '[name].[contenthash].css',
     }),
 
     new CopyPlugin({
@@ -90,8 +72,6 @@ module.exports = {
         options: {
           concurrency: 100,
         },
-      }),
-    // Копируем картинки
-   
+    }),
   ],
 };

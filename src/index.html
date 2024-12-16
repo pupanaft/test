@@ -11,12 +11,157 @@
 
 <body class="site">
     <header class="header">
-        <img class="header__image" src="images/candies.png" alt="" />
+        <div class="header__player">
+            <img class="header__image" src="images/candies.png" alt="candies" />
+        </div>
         <button class="header__video video">
             <div class="video__text">Смотреть видео</div>
-            <img class="video__icon" src="images/play.svg" />
+            <img class="video__icon" src="images/play.svg" alt="play-icon" />
         </button>
     </header>
+    <main class="content">
+        <section class="grid">
+            <div class="grid__body">
+                <div class="grid__card grid__card--1 card">
+                    <header class="card__header">
+                        <div class="card__info">
+                            <h1 class="card__title">Горох в стручках, 1 кг</h1>
+                            <ul class="card__tag tag tag--header">
+                                <li class="tag__item tag__item--gr">- 29%</li>
+                                <li class="tag__item tag__item--yel">Товар дня</li>
+                            </ul>
+                        </div>
+                        <div class="card__stable-buttons stable-buttons">
+                            <button class="stable-buttons__item stable-buttons__item--like"></button>
+                            <button class="stable-buttons__item stable-buttons__item--whatch"></button>
+                        </div>
+                    </header>
+                    <footer class="card__footer">
+                        <ul class="card__tag tag tag--footer">
+                            <li class="tag__item tag__item--gr">- 29%</li>
+                            <li class="tag__item tag__item--yel">Товар дня</li>
+                        </ul>
+                        <div class="card__price">500 ₽</div>
+                        <button class="card__submit submit">Оставить заявку</button>
+                    </footer>
+                </div>
+                <div class="grid__card grid__card--2 card">
+                    <header class="card__header">
+                        <div class="card__info">
+                            <h1 class="card__title">Голубика лесная, 200 г</h1>
+                            <ul class="card__tag tag tag--header">
+                                <li class="tag__item tag__item--pi">- 31%</li>
+                                <li class="tag__item tag__item--bl">Распродажа</li>
+                            </ul>
+                        </div>
+                        <div class="card__stable-buttons stable-buttons">
+                            <button class="stable-buttons__item stable-buttons__item--like"></button>
+                            <button class="stable-buttons__item stable-buttons__item--whatch"></button>
+                        </div>
+                    </header>
+                    <footer class="card__footer">
+                        <ul class="card__tag tag tag--footer">
+                            <li class="tag__item tag__item--pi">- 31%</li>
+                            <li class="tag__item tag__item--bl">Распродажа</li>
+                        </ul>
+                        <div class="card__price">140 ₽</div>
+                        <button class="card__submit submit">Оставить заявку</button>
+                    </footer>
+                </div>
+                <div class="grid__card grid__card--3 card">
+                    <header class="card__header">
+                        <div class="card__info">
+                            <h1 class="card__title">Морковь мытая, 1 кг</h1>
+                            <ul class="card__tag tag tag--header">
+                                <li class="tag__item tag__item--vi">Хит</li>
+                            </ul>
+                        </div>
+                        <div class="card__stable-buttons stable-buttons">
+                            <button class="stable-buttons__item stable-buttons__item--like"></button>
+                            <button class="stable-buttons__item stable-buttons__item--whatch"></button>
+                        </div>
+                    </header>
+                    <footer class="card__footer">
+                        <ul class="card__tag tag tag--footer">
+                            <li class="tag__item tag__item--vi">Хит</li>
+                        </ul>
+                        <div class="card__price">140 ₽</div>
+                        <button class="card__submit submit">Оставить заявку</button>
+                    </footer>
+                </div>
+                <div class="grid__card grid__card--4 ">
+                    <div class="slider">
+                        <ul class="slider__wrapper">
+                            <li class="slider__item">
+                                <img class="slider__image" src="images/corn.png" alt="popcorn">
+                                <header class="slider__header ">
+                                    <div class="slider__info">
+                                        <ul class="slider__tag tag">
+                                            <li class="tag__item  tag__item--yel tag__item--slider">Товар дня</li>
+                                            <li class="tag__item  tag__item--gr tag__item--slider">- 29%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="slider__stable-buttons stable-buttons">
+                                        <button class="stable-buttons__item stable-buttons__item--like-sl"></button>
+                                        <button class="stable-buttons__item stable-buttons__item--whatch-sl"></button>
+                                    </div>
+                                </header>
+                                <footer class="slider__footer">
+                                    <h1 class="slider__title">Попкорн солёный, для СВЧ-печи, 120 г</h1>
+                                    <div class="slider__price">160 ₽</div>
+                                    <button class="slider__submit submit">Оставить заявку</button>
+                                </footer>
+                            </li>
+                            <li class="slider__item">
+                                <img class="slider__image" src="images/ice_cream.png" alt="ice_cream">
+                                <header class="slider__header">
+                                    <div class="slider__info">
+                                        <ul class="slider__tag tag">
+                                            <li class="tag__item tag__item--vi">Хит</li>
+                                        </ul>
+                                    </div>
+                                    <div class="slider__stable-buttons stable-buttons">
+                                        <button class="stable-buttons__item stable-buttons__item--like-sl"></button>
+                                        <button class="stable-buttons__item stable-buttons__item--whatch-sl"></button>
+                                    </div>
+                                </header>
+                                <footer class="slider__footer">
+                                    <h1 class="slider__title">Эскимо с малиной, 150 г</h1>
+                                    <div class="slider__price">190 ₽</div>
+                                    <button class="slider__submit submit">Оставить заявку</button>
+                                </footer>
+                            </li>
+                        </ul>
+                        <span class="slider__pagination pagination"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="site__feedback feedback ">
+        <form class="feedback__form">
+            <header class="feedback__header">
+                <h1 class="feedback__title">Оставьте заявку</h1>
+                <button class="feedback__close" type="button"></button>
+            </header>
+            <div class='feedback__result'></div>
+            <label class="feedback__label">
+                <input class="feedback__input feedback__name" type="text" placeholder="Ваше имя *" maxlength="15"
+                    pattern='^[a-zA-Zа-яА-Я]{1,15}$' />
+            </label>
+            <label class="feedback__label">
+                <input class="feedback__input feedback__tel" type="tel" placeholder="Номер телефона*"
+                    pattern='^\+7\d{10}$' maxlength="12" />
+            </label>
+            <footer class="feedback__footer">
+                <label class="feedback__terms">
+                    <input class="feedback__checkbox" type="checkbox" />
+                    Я соглашаюсь на обработку персональных данных
+                </label>
+                <button id="sub" class="feedback__submit submit" type="button" disabled="true">Отправить</button>
+            </footer>
+        </form>
+    </section>
 </body>
 
 </html>

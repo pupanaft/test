@@ -1,10 +1,31 @@
-// @font-face {
-//     font-family: 'TT Lakes-l';
-//     src: url('../fonts/TTLakes-Light.eot');
-//     src: local('../fonts/TT Lakes Light'), local('TTLakes-Light'),
-//         url('../fonts/TTLakes-Light.eot?#iefix') format('embedded-opentype'),
-//         url('../fonts/TTLakes-Light.woff') format('woff'),
-//         url('../fonts/TTLakes-Light.ttf') format('truetype');
-//     font-weight: 300;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'Inter-MediumItalic';
+    src: local('../fonts/Inter-MediumItalic'), local('Inter_18pt-Medium'),
+        url('../fonts/Inter-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: local('../fonts/Inter-SemiBold'), local('Inter_18pt-Medium'),
+        url('../fonts/Inter-SemiBold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: local('../fonts/Inter-Bold'), local('Inter_18pt-Medium'),
+        url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: local('../fonts/Inter-Medium'), local('Inter_18pt-Medium'),
+        url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
