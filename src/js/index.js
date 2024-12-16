@@ -9,16 +9,15 @@ const pagination = sliderWrapper.querySelector(".slider__pagination");
 let pageIndex = 0;
 function scrollToIndex(index) {
   const cardWidth = sliderItems[0].offsetWidth;
-  const gap = 16; // расстояние между карточками
-  const padding = 65; // отступы
+  const gap = 16; 
+  const padding = 65;
 
   const scrollTarget = index == 0 ? 0 : padding + index * (cardWidth + gap);
   slider.scrollTo({
     left: scrollTarget,
-    behavior: "smooth", // плавная прокрутка
+    behavior: "smooth",
   });
 
-  // Обновляем текущий индекс и пагинацию
   pageIndex = index;
   renderPagination();
 }
@@ -43,15 +42,11 @@ const slider = sliderWrapper.querySelector(".slider__wrapper");
 slider.addEventListener("scroll", () => {
   console.log(slider.scrollLeft);
 
-  // Параметры слайдера
-  const cardWidth = sliderItems[0].offsetWidth; // Ширина карточки
-  const gap = 16; // Расстояние между карточками
-  const padding = 65; // Отступы
+  const cardWidth = sliderItems[0].offsetWidth;
+  const gap = 16;
+  const padding = 65;
 
-  // Центр видимой области
   const sliderCenter = slider.scrollLeft + slider.offsetWidth / 2;
-
-  // Определение активной карточки
   let activeIndex = 0;
   let minDistance = Infinity;
 
@@ -80,6 +75,7 @@ const submitButton = form.querySelector(".feedback__submit");
 const close = form.querySelector(".feedback__close");
 const result = formWrapper.querySelector(".feedback__result");
 const videoPlay = document.querySelector(".header__video");
+
 submitButton.addEventListener("click", (e) => {
   fetch(`/api/feedback?name=${name.value}&tel=${telInput.value}`, {
     method: "GET",
@@ -207,10 +203,12 @@ videoPlay.addEventListener("click", () => {
   player.offsetHeight;
 
   player.innerHTML = `<iframe width="${player.offsetWidth}" height="${player.offsetHeight}" src="https://rutube.ru/play/embed/975b7ef01d4f1b3d948c646e85f244d5/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>`;
+  
   videoPlay.classList.add("header__video--close");
   const closeButton = document.createElement("button");
   closeButton.classList.add("header__close");
   player.append(closeButton);
+
   closeButton.addEventListener("click", () => {
     videoPlay.classList.remove("header__video--close");
     player.innerHTML =
